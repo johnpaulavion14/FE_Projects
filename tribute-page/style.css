@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+/* Header */
+header {
+    width: 100%;
+    background-color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+header .Header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* logo */
+header #logo{
+    display: flex;
+}
+#logo img {
+    margin: 10px;
+    width: 60px;
+}
+/* Navigation bar */
+#navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    width:600px;
+    list-style: none;
+}
+#navbar li {
+    color:silver;
+    font-size: 25px;
+}
+#navbar li a { 
+    color: silver;
+}
+
+/* Source Button*/
+header #button{
+    background:black;
+	color: silver;
+	font-size: 25px;
+	padding: 3px 10px;
+	border-radius: 20px;
+    border-color: darkgray;
+}
+
+
+
+
+/* Main */
+main {
+    width: 100%;
+    display: flex;
+    background: lightgray;
+    
+}
+main .Main {
+    margin-top: 20px;
+    width: 80%;
+
+}
+/* Article */
+main section article {
+    display: flex;
+    align-items: center;
+    
+    }
+main section article .paragraph {
+    margin: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+main section article .paragraph h1{
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+/* Image */
+main article .Image {
+    width: 35%;
+    margin: 20px;
+}
+
+
+/* Sidebar */
+main .Sidebar{
+    width: 20%;
+    background-color: rgb(207, 196, 196);
+    color:black;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 5px;
+}
+.Sidebar .img-caption{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+.Sidebar h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Sidebar ul{
+    list-style: none;
+    
+}
+.Sidebar li{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.Sidebar img{
+    width: 250px
+}
+
+
+
+/* footer */
+footer{
+    background: silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
