@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Survey Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="style.css">
+</head>
+<body>
+    <form action="results.html" method="get" target="_blank" enctype="multipart/form-data" >
+        <header>
+            <h1 id="title">Application Form</h1>
+            <section id="time-section">
+                <label>Date
+                    <input type="date" name="date">
+                </label>
+                <label>Time
+                    <input type="time" name="time">
+                </label> 
+            </section>
+        </header>
+    <hr>
+
+    <div id="main-container">
+        <section id="left-sidebar">
+            <h3>Fill up your personal information:</h3>
+                <label >First Name:
+                    <input type="text" name="firstname" placeholder="Input your firstname" required>
+                </label>
+                
+                <label >Last Name:
+                    <input type="text" name="lastname" placeholder="Input your lastname" required>
+                </label>
+                
+                <label for="birthdate">Birthdate:
+                    <input type="number" name="month" id="birthdate" placeholder="Month" min="1" max="12"> 
+                    <input type="number" name="days" id="birthdate2" placeholder="Days" min="1" max="31">
+                    <input type="number" name="year" id="birthdate3" placeholder="Year" size="10" min="1900" max="2100">
+                </label>
+
+                <label for="age">Age:
+                    <input type="number" name="age" id="age" placeholder="Age" min="1" max="100"> 
+                </label>
+
+                <label id="address">Address:
+                    <div>
+                    <input type="text" name="barangay" placeholder="Barangay" size="8">
+                    <input type="text" name="municipality" placeholder="Municipality" size="8">
+                    <input type="text" name="province" placeholder="Province" size="8">
+                    </div>
+                </label>
+
+                <label for="gender">Gender:
+                    <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </label>
+
+                <label for="email">Email:
+                    <input type="email" name="email" id="email" placeholder="Input your email" size="25" required>
+                </label>
+
+                <label for="cpnumber">CP number:
+                    <input type="tel" name="cellphone number" id="cpnumber" placeholder="eg.+6391234567789" size="15" list="cplist" minlength="11" maxlength="13" required>
+                    <datalist id="cplist">
+                        <option value="+63">+63</option>
+                    </datalist>
+                </label>
+
+                <label id="message">About yourself:
+                    <textarea id="text-area" name="message" rows="15" placeholder="Share a brief message about your past experiences,interests,hobbies, etc." required></textarea>
+                </label>
+
+                <label>Upload your resume here!
+                    <input id="upload-file" type="file" name="file" required>
+                </label>
+        </section>
+
+        <section id="right-sidebar">
+            <h3>Exam:</h3>
+            <h4>Instruction: check the box which input type is used in this page.</h4>
+
+            <table id="input-types">
+                <tbody id="body">
+                    <tr class="rows">
+                        <td> <label><input type="checkbox" name="button">button</label></td>
+                        <td> <label><input type="checkbox" name="datetime">datetime</label></td>
+                        <td> <label><input type="checkbox" name="month">month</label></td>
+                        <td> <label><input type="checkbox" name="reset">reset</label></td>
+                        <td> <label><input type="checkbox" name="text">text</label></td>
+                    </tr>
+                    <tr class="rows">
+                        <td> <label><input type="checkbox" name="checkbox">checkbox</label></td>
+                        <td> <label><input type="checkbox" name="email">email</label></td>
+                        <td> <label><input type="checkbox" name="number">number</label></td>
+                        <td> <label><input type="checkbox" name="search">search</label></td>
+                        <td> <label><input type="checkbox" name="time">time</label></td>
+                    </tr>
+                    <tr class="rows">
+                        <td> <label><input type="checkbox" name="color">color</label></td>
+                        <td> <label><input type="checkbox" name="file">file</label></td>
+                        <td> <label><input type="checkbox" name="password">password</label></td>
+                        <td> <label><input type="checkbox" name="submit">submit</label></td>
+                        <td> <label><input type="checkbox" name="url">url</label></td>
+                    </tr>
+                    <tr class="rows">
+                        <td> <label><input type="checkbox" name="date">date</label></td>
+                        <td> <label><input type="checkbox" name="hidden">hidden</label></td>
+                        <td> <label><input type="checkbox" name="radio">radio</label></td>
+                        <td> <label><input type="checkbox" name="tel">tel</label></td>
+                        <td> <label><input type="checkbox" name="week">week</label></td>
+                    </tr>
+                    <tr class="rows">
+                        <td><label id="datetime"><input type="checkbox" name="datetime-local"><span>datetime-local</span></label></td>
+                        <td><label><input type="checkbox" name="image">image</label></td>
+                        <td><label><input type="checkbox" name="range">range</label></td>
+                    </tr>
+                </tbody>
+            </table>
+            <section id="choice">
+                <h4>Instruction: choose the correct answer.</h4>
+                <p>1. Only one button in a given group can be selected at the same time.</p>
+                <div>
+                    <label><input type="radio" name="1. answer" value="radio">radio</label>
+                    <label><input type="radio" name="1. answer" value="checkbox">checkbox</label>
+                    <label><input type="radio" name="1. answer" value="button">button</label>
+                </div>
+                <p>2. Many button in a given group can be selected at the same time.</p>
+                <div>
+                    <label><input type="radio" name="2. answer" value="radio">radio</label>
+                    <label><input type="radio" name="2. answer" value="checkbox">checkbox</label>
+                    <label><input type="radio" name="2. answer" value="number">number</label>
+                </div>
+                <p>3. Let web developers include data that cannot be seen or modified by users when a form is submitted.</p>
+                <div>
+                    <label><input type="radio" name="3. answer" value="submit">submit</label>
+                    <label><input type="radio" name="3. answer" value="hidden">hidden</label>
+                    <label><input type="radio" name="3. answer" value="search">search</label>
+                </div>
+                <p>4. Presented as a one-line plain text editor control in which the text is obscured so that it cannot be read.</p>
+                <div>
+                    <label><input type="radio" name="4. answer" value="password">password</label>
+                    <label><input type="radio" name="4. answer" value="text">text</label>
+                    <label><input type="radio" name="4. answer" value="date">date</label>
+                </div>
+                <p>5. Let the user choose one or more from their device storage.</p>
+                <div>
+                    <label><input type="radio" name="5. answer" value="color">color</label>
+                    <label><input type="radio" name="5. answer" value="url">url</label>
+                    <label><input type="radio" name="5. answer" value="file">file</label>
+                </div>
+            </section>
+        </section>
+    </div>
+    <section id="submit-section"> 
+        <input id="reset" type="reset" value="Reset Input"></input>
+        <input id="submit" type="submit" value="SUBMIT"></input>
+    </section>
+</form>
+
+
+</body>
+
+</html>
+

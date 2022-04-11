@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+hr{
+    border: 1px solid rgb(219, 219, 124);
+    margin: 5px 0px;
+}
+
+body{
+    background-color: rgb(255, 255, 183);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}
+body form{
+    width: 100%;
+}
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header #time-section{
+    display: flex;
+    flex-direction: column;
+}
+header #time-section label{
+    width: 100%;
+}
+header #time-section input{
+    width:90%
+}
+#main-container{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5em;
+}
+/* Left Sidebar */
+#left-sidebar{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#left-sidebar h3{
+    margin-bottom: 5px;
+}
+#left-sidebar form{
+    border: 1px solid rgb(219, 219, 124);
+    padding: 5px;
+    margin-right: 20px;
+}
+#left-sidebar #address {
+    display:flex;
+}
+#left-sidebar #address div{
+    display:flex;
+    justify-content: space-evenly;
+}
+#left-sidebar #address input{
+    width: 30%;
+}
+#left-sidebar #message{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+#left-sidebar #message #text-area{
+    width: 95%;
+    margin: auto;
+}
+#left-sidebar #upload-file{
+    cursor: pointer;
+    
+}
+/* Right Sidebar */
+#right-sidebar{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+#right-sidebar h3{
+    margin-bottom: 5px;
+}
+/* Tables */
+
+table{
+    display: flex;
+    margin-top: 5px;
+}
+table tbody{
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: black;
+    margin: auto;
+    padding: 20px 0;
+}
+
+table .rows{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+table .rows #datetime{
+    display: flex;
+    flex-direction: column;
+    width: 10px;
+    font-size: 0.9em;
+}
+/* Choice Section */
+#choice{
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+#choice div{
+    display: flex;
+    justify-content: space-evenly;
+}
+#choice h4{
+    font-size: 16px;
+}
+/* Submit Section */
+#submit-section{
+    margin-top: 10px;
+}
+#submit-section input{
+    padding:5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#submit-section #reset:hover{
+    background-color: yellow;
+}
+#submit-section #submit:hover{
+    background-color: green;
+}
+
+
+
+
+@media only screen and (min-width: 768px) {
+    header h1{
+        display: flex;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 430px) {
+    #right-sidebar{
+        margin-top: 20px;
+    }
+    #submit-section{
+        margin-top: 40px;
+    }
+    table .rows td{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    header{
+        flex-wrap: wrap;
+    }
+}
