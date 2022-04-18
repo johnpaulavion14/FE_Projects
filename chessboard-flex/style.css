@@ -1,0 +1,157 @@
+*{
+    /* border: 1px solid red; */
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Header */
+header{
+    display: flex;
+    margin: -200px auto 30px;
+}
+header h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    color: rgb(47,38,31);
+    margin: auto;
+    letter-spacing: 5px;
+
+}
+/* Border Outside & Inside */
+#border-outside{
+    width: 320px;
+    height: 320px;
+    background-color: rgb(222,186,112);
+    border-radius: 5px;
+    display: flex;
+}
+#border-inside{
+    display: flex;
+    width: 290px;
+    height: 290px;
+    border:1px solid rgb(47,38,31) ;
+    margin: auto;
+}
+
+/* Main Container */
+#main-container{
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222,186,112);
+    border: 3px solid rgb(47,38,31);
+    margin: auto;
+}
+/* Number Section */
+#main-container #leftside-number{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    margin: auto;
+}
+#main-container #leftside-number div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.7em;
+}
+#main-container #rightside-number{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    margin: auto;
+}
+#main-container #rightside-number div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.7em;
+    transform: rotate(180deg);
+}
+/* Letter & Box Container*/
+#main-container #letter-box{
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+}
+
+/* Main Box */
+#main-box{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(47,38,31);
+    background-color: rgb(222,186,112);
+}
+/* Letter section */
+#letter-box #top-letter{
+    display: flex;
+    width: 250px;
+    margin: auto;
+    direction: rtl;
+}
+#letter-box #top-letter div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.6em;
+    transform: rotate(180deg);
+}
+#letter-box #bottom-letter{
+    display: flex;
+    width: 250px;
+    margin: auto;
+}
+#letter-box #bottom-letter div{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.6em;
+}
+/* Row Container */
+#main-box .box{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    
+}
+
+/* box colors */
+#main-box .box .item-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: rgb(222,186,112);
+    
+}
+
+#main-box .box .item-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: rgb(47,38,31);
+}
+/* pieces color */
+#white-pieces1 .item-1,#white-pieces1 .item-2,#white-pieces2 .item-1,#white-pieces2 .item-2{
+    color: white;
+}
