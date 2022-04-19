@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+}
+
+body{
+    display: grid;
+    text-align: center;
+}
+/* Title*/
+h1{
+    font-size: 2vw;
+    margin-bottom: .3em;
+    letter-spacing: .5em;
+}
+/* Main Container */
+#main-container{
+    width: 43vw;
+    height: 43vw;
+    background-color: rgb(227, 228, 230);
+    border-radius: 5px;
+    display: grid;
+    margin: auto;
+}
+#main-container #border-section{
+    width: 40vw;
+    height: 40vw;
+    border: .4vw solid rgb(50, 97, 87);
+    margin: auto;
+
+    /* grid layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ".        top          ."
+                         "left  chessboard  right"
+                         ".       bottom        ." ;
+}
+/* Letter Section */
+#border-section #letter-top{
+    grid-area: top;
+    display: grid;
+    grid-template-columns: repeat(8,12.5%);
+    direction: rtl;
+}
+#border-section #letter-top div{
+    font-size: 1.5vw;
+    align-self: center;
+    transform: rotate(180deg);
+}
+#border-section #letter-bottom{
+    grid-area: bottom;
+    display: grid;
+    grid-template-columns: repeat(8,12.5%);
+}
+#border-section #letter-bottom div{
+    font-size: 1.5vw;
+    align-self: center;
+}
+/* Number Section */
+#border-section #number-left{
+    grid-area: left;
+    display: grid;
+    grid-template-rows: repeat(8,12.5%);
+}
+#border-section #number-left div{
+    font-size: 1.5vw;
+    align-self: center;
+}
+#border-section #number-right{
+    grid-area: right;
+    display: grid;
+    grid-template-rows: repeat(8,12.5%);
+}
+#border-section #number-right div{
+    font-size: 1.5vw;
+    align-self: center;
+    transform: rotate(180deg);
+}
+/* Chessboard Main Box*/
+#box-container{
+    grid-area: chessboard;
+    width: 35vw;
+    height: 35vw;
+    display: grid;
+    grid-template-columns: repeat(8,12.5%);
+    grid-template-rows: repeat(8,12.5%);
+    border: .3vw solid rgb(50, 97, 87);
+    margin: auto;
+}
+#box-container .box1{
+    text-align: center;
+    background-color: rgb(227, 228, 230);
+    font-size: 3vw;
+    
+}
+#box-container .box2{
+    text-align: center;
+    background-color: rgb(50, 97, 87);
+    font-size: 3vw;
+}
+#box-container .white{
+    color: rgb(151, 151, 0);
+    
+}
+
+
