@@ -1,0 +1,20 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "description": "A product landing page npm demo",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass ./src/style.scss ./public/main.css",
+    "sass-watch": "npx sass ./src/style.scss ./public/main.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing",
+    "page"
+  ],
+  "author": "John Paul Bocatija",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.50.1"
+  }
+}

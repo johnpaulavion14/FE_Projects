@@ -1,0 +1,25 @@
+@use 'buttons';
+@use 'variables';
+
+
+
+
+body{
+    font: 100% variables.$font-stack;
+    color: variables.$primary-color;
+
+}
+
+h1{
+    font: 100% variables.$font-stack;
+    color: variables.$primary-color;
+}
+
+@mixin grid(){
+    display: -ms-grid;
+    display: grid;
+}
+
+h2{
+    @include grid();
+}

@@ -1,0 +1,20 @@
+button {
+  color: red;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: red;
+}
+
+h1 {
+  font: 100% Helvetica, sans-serif;
+  color: red;
+}
+
+h2 {
+  display: -ms-grid;
+  display: grid;
+}
+
+/*# sourceMappingURL=main.css.map */
