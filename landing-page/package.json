@@ -4,8 +4,12 @@
   "description": "A product landing page npm demo",
   "main": "index.js",
   "scripts": {
-    "sass": "npx sass ./src/style.scss ./public/main.css",
-    "sass-watch": "npx sass ./src/style.scss ./public/main.css --watch",
+    "sass": "npx sass ./src/style.scss ./public/style.css",
+    "sass-watch": "npx sass ./src/style.scss ./public/style.css --watch",
+
+    "action": "npx sass ./src/action-style.scss ./public/action-style.css",
+    "action-watch": "npx sass ./src/action-style.scss ./public/action-style.css --watch",
+    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
