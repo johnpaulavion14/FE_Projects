@@ -4,11 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: grid;
   grid-template-columns: 100%;
   grid-template-areas: "navbar" "home" "product" "materials" "testimonies" "CTA";
-  font-family: monospace;
   text-align: center;
 }
 
@@ -21,39 +24,12 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
 }
-
-.brand-title {
+.navbar .square-button {
   padding: 1rem;
   margin: 0.5rem;
   display: none;
 }
-
-.navbar-links {
-  height: 100%;
-}
-
-.navbar-links ul {
-  width: 100vw;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.navbar-links li {
-  list-style: none;
-}
-
-.navbar-links li a {
-  display: block;
-  text-decoration: none;
-  color: black;
-  padding: 1rem;
-}
-
-.navbar-links li:hover {
-  background-color: #555;
-}
-
-.toggle-button {
+.navbar .toggle-button {
   position: absolute;
   top: 0.75rem;
   right: 1rem;
@@ -63,12 +39,31 @@ body {
   width: 30px;
   height: 21px;
 }
-
-.toggle-button .bar {
+.navbar .toggle-button .bar {
   height: 3px;
   width: 100%;
   background-color: black;
   border-radius: 10px;
+}
+.navbar .navbar-links {
+  height: 100%;
+}
+.navbar .navbar-links ul {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar .navbar-links ul li {
+  list-style: none;
+}
+.navbar .navbar-links ul li :hover {
+  background-color: #555;
+}
+.navbar .navbar-links ul li a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 1rem;
 }
 
 @media (max-width: 500px) {
@@ -76,30 +71,24 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .toggle-button {
+  .navbar .toggle-button {
     display: flex;
   }
-
-  .navbar-links {
+  .navbar .navbar-links {
     display: none;
     width: 100%;
   }
-
-  .navbar-links ul {
+  .navbar .navbar-links ul {
     width: 100%;
     flex-direction: column;
   }
-
-  .navbar-links ul li {
+  .navbar .navbar-links ul li {
     text-align: center;
   }
-
-  .navbar-links ul li a {
+  .navbar .navbar-links ul li a {
     padding: 0.5rem 1rem;
   }
-
-  .navbar-links.active {
+  .navbar .navbar-links.active {
     display: flex;
   }
 }
@@ -180,6 +169,7 @@ body {
     letter-spacing: 0.3rem;
   }
   #product .product-subname {
+    font-family: "Dancing Script", cursive;
     margin-top: 0.5em;
   }
   #product p {
@@ -226,6 +216,7 @@ body {
     letter-spacing: 0.3rem;
   }
   #materials .materials-subname {
+    font-family: "Dancing Script", cursive;
     margin-top: 0.5em;
     color: rgb(91, 94, 90);
   }
@@ -252,6 +243,7 @@ body {
     grid-area: testimonies;
     text-align: center;
     background-color: rgb(221, 226, 219);
+    font-family: "PT Sans", sans-serif;
   }
   #testimonies #testimonies-heading {
     font-size: 1.5rem;
@@ -275,14 +267,15 @@ body {
   #testimonies section div p {
     margin-bottom: 0.7em;
     text-align: justify;
-    font-family: "PT Sans", sans-serif;
     font-weight: 400;
+    line-height: 200%;
   }
   #testimonies section div .testimonial-name {
+    font-family: "Dancing Script", cursive;
+    margin-top: 1em;
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.03rem;
-    font-family: "PT Sans", sans-serif;
     font-weight: 700;
   }
 
@@ -338,6 +331,20 @@ body {
     color: rgb(91, 94, 90);
     margin-top: 1em;
     font-style: italic;
+  }
+
+  .scroll-up {
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: rgb(91, 94, 90);
+    bottom: 0px;
+    right: 0px;
+  }
+  .scroll-up img {
+    width: 2vw;
+    margin: auto;
   }
 
   footer {
@@ -397,6 +404,13 @@ body {
   body #product, body #materials, body #testimonies, body #CTA {
     padding-top: 5vw;
     padding-bottom: 5vw;
+  }
+
+  .scroll-up {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    bottom: 10px;
   }
 }
 @media (min-width: 1000px) {
@@ -462,6 +476,13 @@ body {
 
   #product .background, #materials .background, #testimonies .background {
     padding: 0 5vw 3vw 5vw;
+  }
+
+  .scroll-up {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: 20px;
   }
 }
 
