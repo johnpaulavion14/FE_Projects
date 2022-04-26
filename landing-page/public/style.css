@@ -92,7 +92,7 @@ body {
     display: flex;
   }
 }
-@media (min-width: 360px) {
+@media (min-width: 330px) {
   #home {
     grid-area: home;
     display: grid;
@@ -123,6 +123,7 @@ body {
     font-family: "PT Sans", sans-serif;
   }
   #home #leftside form #email {
+    width: 13rem;
     font-weight: 400;
     font-size: 0.8rem;
     padding: 1.25rem 0.3rem;
@@ -289,7 +290,7 @@ body {
     justify-content: end;
   }
   #CTA .image img {
-    width: 20rem;
+    width: 19rem;
     height: 30rem;
     object-fit: cover;
   }
@@ -317,6 +318,7 @@ body {
     margin-top: 2em;
   }
   #CTA .right-side form #email {
+    width: 13rem;
     font-size: 0.8rem;
     padding: 1.25rem 0.3rem;
   }
@@ -411,6 +413,9 @@ body {
     height: 40px;
     right: 10px;
     bottom: 10px;
+  }
+  #home #leftside form #email, #CTA .right-form #email {
+    width: 14rem;
   }
 }
 @media (min-width: 1000px) {

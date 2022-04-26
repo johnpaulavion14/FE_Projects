@@ -93,7 +93,7 @@ body{
     }
  }
     
-@media (min-width:360px){
+@media (min-width:330px){
 
 //Home Section
 #home{
@@ -125,6 +125,7 @@ body{
             margin-top: 2em;
             font-family: 'PT Sans', sans-serif;
             #email{
+                width: 13rem;
                 font-weight: 400;
                 font-size: .8rem;
                 padding: 1.25rem 0.3rem;
@@ -294,7 +295,7 @@ body{
     .image{
         justify-content: end;
         img{
-            width: 20rem;
+            width: 19rem;
             height: 30rem;
             object-fit: cover;
         }
@@ -323,6 +324,7 @@ body{
             justify-content: center;
             margin-top: 2em;
             #email{
+                width:13rem;
                 font-size: .8rem;
                 padding: 1.25rem 0.3rem;
             }
