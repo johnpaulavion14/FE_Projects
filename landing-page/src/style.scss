@@ -1,0 +1,484 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    // border: 1px solid red; 
+}
+  
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "navbar" "home" "product" "materials" "testimonies" "CTA";
+    text-align: center;
+}
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:rgb(221, 226, 219);
+    color: black;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+}
+
+.brand-title {
+    padding:  1rem;
+    margin: .5rem;
+    display: none;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    width:100vw;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+
+
+@media (min-width:360px){
+
+//Home Section
+#home{
+    grid-area: home;
+    display: grid;
+    padding: .8em;
+
+    //Leftside Text & Logo
+    #leftside{   
+        grid-area: text;
+        #logotext{
+            color: rgb(91, 94, 90);
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            img{
+                width: 3rem;
+                height: 3rem;
+            }
+            p{
+                font-family: 'Dancing Script', cursive;
+                padding-left: .5rem;
+            }
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2em;
+            font-family: 'PT Sans', sans-serif;
+            #email{
+                font-weight: 400;
+                font-size: .8rem;
+                padding: 1.25rem 0.3rem;
+            }
+            #submit{
+                background-color: black;
+                color: white;
+                font-size: .8rem;
+                font-weight: 700;
+                padding: 1.25rem .9rem;
+            }
+        }
+        #promo-tag{
+            font-family: 'Fredoka One', cursive;
+            font-size: 4rem;
+            letter-spacing: .3rem;
+            margin-top: .5rem;
+        }
+        #validity-date{
+            font-family: 'PT Sans', sans-serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: rgb(91, 94, 90);
+            margin-top: 1em;
+        }
+    }
+    //Right Side  Picture 
+    #rightside{
+        grid-area: picture;
+        display: flex;
+        height:30rem;
+    }
+    #rightside{
+        display: none;
+    }
+}
+// Product Section 
+#product{
+    grid-area: product;
+    padding: .8em;
+    text-align: center;
+    background-color:rgb(221, 226, 219);
+    font-family: 'PT Sans', sans-serif;
+    #product-heading{
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: .3rem;
+    }
+    .product-subname{
+        margin-top: .5em;
+    }
+    p{
+        width: 80%;
+        color:rgb(91, 94, 90);
+        margin:0 auto;
+    }
+    section{
+        display: grid;
+        grid-template-columns: 80%;
+        justify-content: center;
+        margin-top: 2em;
+        row-gap: 2em;
+        div{
+            padding: .5em;
+            img{
+                width: 15rem;
+                height: 15rem;
+                object-fit: cover;
+            }
+        }
+        figcaption {
+            margin-top: 1em;
+            .product-name{
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: .2rem;
+            }
+            p{
+                font-style: italic;
+            }
+        }
+    }
+}
+//Materials Section
+#materials{
+    grid-area: ingridients;
+    padding: .8em;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+
+    #materials-heading{
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: .3rem;
+    }
+    .materials-subname{
+        margin-top: .5em;
+        color: rgb(91, 94, 90);
+    }
+    section{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 2em;
+        justify-content: center;
+        row-gap: 3em;
+        img{
+            width: 10em;
+            height: 10em;
+            object-fit: cover;
+        }
+        p{
+            font-size: 1.2rem;
+            margin:1em 0;
+            font-weight: bold;
+        }
+    }
+}
+//Testimonies Section
+#testimonies{
+    padding: .8em;
+    grid-area: testimonies;
+    text-align: center;
+    background-color:rgb(221, 226, 219);
+    #testimonies-heading{
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: .3rem;
+        padding: 1em;
+    }
+    section{
+        color: rgb(91, 94, 90);
+        display: grid;
+        grid-template-columns: 80%;
+        justify-content: center;
+        margin-top: 2em;
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1em 1em;
+            p{
+                margin-bottom: .7em;
+                text-align: justify;
+                font-family: 'PT Sans', sans-serif;
+                font-weight: 400;
+            }
+            .testimonial-name{
+                font-size: 1rem;
+                font-weight: bold;
+                letter-spacing: 0.03rem;
+                font-family: 'PT Sans', sans-serif;
+                font-weight: 700;
+            }
+        }
+    }
+}
+// CAT Section 
+#CTA{
+    grid-area: CTA;
+    padding:.8em ;
+    display: grid;
+    font-family: 'PT Sans', sans-serif;
+    .image{
+        justify-content: end;
+        img{
+            width: 20rem;
+            height: 30rem;
+            object-fit: cover;
+        }
+        .image{
+            display: none;
+        }
+    }
+
+    //right side 
+    .right-side{
+        display: flex;
+        flex-direction: column;
+        .tag{
+            font-size: 1.5rem;
+            color: rgb(91, 94, 90);
+        }
+        .promo{
+            font-family: 'Fredoka One', cursive;
+            font-size: 4rem;
+            letter-spacing: .3rem;
+            margin-top: .5em;
+        }
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2em;
+            #email{
+                font-size: .8rem;
+                padding: 1.25rem 0.3rem;
+            }
+            #submit{
+                background-color: black;
+                color: white;
+                font-size: .8rem;
+                padding: 1.25rem .9rem;
+            }
+        }
+        .validity{
+            font-size: 1rem;
+            color: rgb(91, 94, 90);
+            margin-top: 1em;
+            font-style: italic;
+            //width: 80%;
+        }
+    }
+
+}
+
+footer{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: .3rem;
+    padding: 2em 0;
+    background-color: rgb(221, 226, 219);
+}
+}
+
+
+@media (min-width:768px){
+  
+    #home{
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "text picture";
+    padding: 1.5em;
+        #leftside{
+            padding-right: 5vw;
+            #validity-date {
+                padding: 0 5vw;
+            }
+
+        }
+        #rightside{
+            display: flex;
+        }
+    }
+    #product section{
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        margin-top: 2em;
+    }
+    #materials section img{
+        width: 15em;
+        height: 15em;
+        object-fit: cover;
+    }
+    #testimonies section{
+        grid-template-columns: 30% 30% 30%;    
+    }
+    #CTA{
+        grid-template-columns: 45% 55%;
+        .image{
+            display: flex;
+        }
+        .right-side{
+            padding-left: 3vw;
+            .validity {
+                padding: 0 5vw;
+            }
+    }
+    }
+    body{
+        #product,#materials,#testimonies,#CTA{
+            padding-top: 5vw;
+            padding-bottom: 5vw;
+        }
+    }
+}
+
+@media (min-width:1000px){
+    .outside-border{
+        padding: 0 3vw;
+        //background-color: rgb(221, 226, 219);
+        background-color: white;
+    }
+    body{
+        #home,#product,#materials,#testimonies,#CTA{
+            background-color: white;
+        }
+    }
+    
+    #home{
+        grid-template-columns: 50% 50%;
+        column-gap: 3vw;
+        #leftside {
+            padding-right: 0;
+            text-align: end;
+            #validity-date {
+                padding: 0 0 0 4rem;
+            }
+            form {
+                justify-content: end;
+            }
+            #logotext {
+                margin-left: 5em;
+            }
+        }
+        #rightside {
+            width: 30vw;
+            justify-content: center;
+            padding: 2em;
+            background-color: rgb(221, 226, 219);
+        }
+    }
+    #testimonies section div {
+        padding: 0 3vw;
+    }
+
+    #CTA .right-side {
+        text-align: start;
+        .validity {
+            padding: 0 5rem 0 0rem;
+        }
+        form {
+            justify-content: start;
+        }
+    }
+
+    #product section,#materials section, #testimonies section{
+        padding: 5vw 0;
+        background-color: rgb(221, 226, 219);
+    }
+    section #materials{
+        padding-top: 0;
+    }
+    section #testimonies{
+        padding-top: 0;
+    }
+    
+    #product .background,#materials .background, #testimonies .background{
+        padding: 0 5vw 3vw 5vw;
+        
+    }
+    
+}

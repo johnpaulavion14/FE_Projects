@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Penny's Coffee Shop</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='action-style.css'>
+    <script src="/src/style.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title"></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="/public/#home">Home</a></li>
+            <li><a href="/public/#product">Products</a></li>
+            <li><a href="/public/#materials">Materials</a></li>
+            <li><a href="/public/#testimonies">Feedbacks</a></li>
+            <li><a href="/public/#CTA">Buy Now</a></li>
+          </ul>
+        </div>
+      </nav>
+    <section class="Shop">
+        <p id="title">Welcome to Penny's Coffee Shop</p>
+        <form action="results.html" method="get" target="_blank" enctype="multipart/form-data" >
+            <div class="details">
+                <label >Name:
+                    <input type="text" name="First Name" placeholder="Input your firstname" required>
+                </label>
+                <label id="address">Location:
+                    <input type="text" name="Street" placeholder="Street" size="8">
+                    <input type="text" name="Barangay" placeholder="Barangay" size="8">
+                </label>
+                <label for="cpnumber">CP number:
+                    <input type="tel" name="Cellphone #" id="cpnumber" placeholder="eg.+6391234567789" size="15" list="cplist" minlength="11" maxlength="13" required>
+                    <datalist id="cplist">
+                        <option value="+63">+63</option>
+                    </datalist>
+                </label>
+            </div>
+
+            <p class="choose-order">
+                Choose your order:
+            </p>
+
+            <div class="product-container">
+                    <div class="product-item">
+                        <img src="product_images/macchiato.webp" alt="">
+                        <figcaption>
+                            <span class="product-name">Macchiato</span>
+                            <p>Hot = ₱80 / Cold = ₱90</p>
+                        </figcaption>
+                        <section class="hot-or-cold">
+                            <div class="hot">
+                                <label><input type="checkbox" name="Macchiato Hot" value="YES">HOT</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                            <div class="cold">
+                                <label><input type="checkbox" name="Macchiato Cold" value="YES">COLD</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="product-item">
+                        <img src="product_images/mocha.webp" alt="">
+                        <figcaption>
+                            <span class="product-name">Mocha</span>
+                            <p>Hot = ₱80 / Cold = ₱90</p>
+                        </figcaption>
+                        <section class="hot-or-cold">
+                            <div class="hot">
+                                <label><input type="checkbox" name="Mocha Hot" value="YES">HOT</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                            <div class="cold">
+                                <label><input type="checkbox" name="Mocha Cold" value="YES">COLD</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="product-item">
+                        <img src="product_images/capuccino.webp" alt="">
+                        <figcaption>
+                            <span class="product-name">Capuccino</span>
+                            <p>Hot = ₱85 / Cold = ₱95</p>
+                        </figcaption>
+                        <section class="hot-or-cold">
+                            <div class="hot">
+                                <label><input type="checkbox" name="Capuccino Hot" value="YES">HOT</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                            <div class="cold">
+                                <label><input type="checkbox" name="Capuccino Cold" value="YES">COLD</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="product-item">
+                        <img src="product_images/americano.jpg" alt="">
+                        <figcaption>
+                            <span class="product-name">Americano</span>
+                            <p>Hot = ₱60 / Cold = ₱70</p>
+                        </figcaption>
+                        <section class="hot-or-cold">
+                            <div class="hot">
+                                <label><input type="checkbox" name="Americano Hot" value="YES">HOT</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                            <div class="cold">
+                                <label><input type="checkbox" name="Americano Cold" value="YES">COLD</label>
+                                <label>No:
+                                    <input type="number" name="Pcs" placeholder="pcs" min="0" max="10"> 
+                                </label>
+                            </div>
+                        </section>
+                    </div>
+            </div>
+            <div class="bottom-details">
+                <p class="choose-payment">Choose your mode of payment:</p>
+                <div class="radio-button">
+                    <label><input type="radio" name="Cash on Delivery" value="YES">Cash on Delivery</label>
+                    <label><input type="radio" name="Online Payment" value="YES">Online Payment</label>
+                </div>
+                <label class="coupon">Enter your Coupon Here:
+                    <input type="text" name="Coupon Code" placeholder="coupon code" size="30">
+                </label>
+
+                <label id="message">Message:
+                    <textarea id="text-area" name="Message" rows="10" placeholder="optional"></textarea>
+                </label>
+            </div>
+
+            <section class="submit-section"> 
+                <input id="reset" type="reset" value="Reset Order"></input>
+                <input id="submit" type="submit" value="Pay Now"></input>
+            </section>
+            
+        </form>
+    </section>  
+
+<footer>&copyPenny's Coffee Bean - All rights reserved 2022</footer>
+
+</body>
+
+
+</html>
+
