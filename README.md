@@ -7,4 +7,4 @@
 
 [Grid Chessboard](https://johnpaulavion14.github.io/batch19-fe-activities/chessboard-grid/)
 
-[Landing Page]()
+[Landing Page](https://johnpaulavion14.github.io/batch19-fe-activities/landing-page/public/index.html#)
