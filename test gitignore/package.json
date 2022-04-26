@@ -1,0 +1,15 @@
+{
+  "name": "product-landing-page",
+  "version": "1.0.0",
+  "description": "practice npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["landing","page"],
+  "author": "john paul",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.50.1"
+  }
+}
