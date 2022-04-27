@@ -268,7 +268,8 @@ body {
   }
   #testimonies section div .testimonial-name {
     font-family: "Dancing Script", cursive;
-    margin-top: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.03rem;
