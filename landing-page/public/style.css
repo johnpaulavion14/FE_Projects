@@ -24,11 +24,6 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
 }
-.navbar .square-button {
-  padding: 1rem;
-  margin: 0.5rem;
-  display: none;
-}
 .navbar .toggle-button {
   position: absolute;
   top: 0.75rem;
@@ -413,9 +408,6 @@ body {
     height: 40px;
     right: 10px;
     bottom: 10px;
-  }
-  #home #leftside form #email, #CTA .right-form #email {
-    width: 14rem;
   }
 }
 @media (min-width: 1000px) {

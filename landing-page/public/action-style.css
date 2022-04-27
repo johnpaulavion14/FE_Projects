@@ -18,11 +18,6 @@ html {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
 }
-.navbar .square-button {
-  padding: 1rem;
-  margin: 0.5rem;
-  display: none;
-}
 .navbar .toggle-button {
   position: absolute;
   top: 0.75rem;
