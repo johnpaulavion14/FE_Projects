@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("320px-transBG.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@media (min-width: 320px) {
+  .mainContainer {
+    width: clamp(250px, 80%, 600px);
+    display: grid;
+    grid-template-rows: 10% 45% 40% 5%;
+    grid-template-areas: "time" "NameOrGreetings" "quotes" "todo";
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .mainContainer .userName {
+    grid-area: NameOrGreetings;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    justify-self: center;
+  }
+  .mainContainer .userName #nameUser {
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(29px, 10vw, 40px);
+    text-align: center;
+  }
+  .mainContainer .userName #inputUser {
+    border: none;
+    border-bottom: 2.32px solid white;
+    background-color: transparent;
+    width: 80%;
+    margin-top: 35px;
+    color: #42FDFD;
+    font-family: "Sigmar One", cursive;
+    font-size: clamp(29px, 10vw, 40px);
+    text-align: center;
+  }
+  .mainContainer .timeContainer {
+    grid-area: time;
+    background-color: black;
+    width: 100%;
+    border-radius: 8.3px;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .mainContainer .timeContainer #time {
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(50px, 13vw, 70px);
+    transform: scale(0.9, 1);
+    letter-spacing: -3px;
+    align-self: center;
+  }
+  .mainContainer .greetingsContainer {
+    grid-area: NameOrGreetings;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    padding: 15px;
+    border-radius: 27px;
+    opacity: 95%;
+    text-align: center;
+  }
+  .mainContainer .greetingsContainer #greetings {
+    color: #42FDFD;
+    font-family: "Sigmar One", cursive;
+    font-size: clamp(24px, 10vw, 40px);
+    margin-top: -5px;
+  }
+  .mainContainer .greetingsContainer #greetings span {
+    margin-top: -10px;
+    display: block;
+    font-size: clamp(30px, 10vw, 50px);
+    transform: scale(0.8, 1.5);
+  }
+  .mainContainer .greetingsContainer .priorityContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mainContainer .greetingsContainer .priorityContainer #priorityQuestion {
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(20px, 5vw, 30px);
+    margin-top: 24px;
+    width: 270px;
+  }
+  .mainContainer .greetingsContainer .priorityContainer #inputPriority {
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    width: 216px;
+    color: #42FDFD;
+    font-size: clamp(20px, 5vw, 30px);
+    font-family: "Sigmar One", cursive;
+    text-align: center;
+    margin: 1em 0;
+  }
+  .mainContainer .greetingsContainer .priorityContainer #mainFocus {
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(20px, 5vw, 30px);
+    margin-top: 24px;
+    padding: 15px 10px;
+    width: 270px;
+  }
+  .mainContainer .greetingsContainer .priorityContainer #mainFocusValue {
+    font-family: "Sigmar One", cursive;
+    font-size: clamp(25px, 10vw, 35px);
+    width: min-content;
+    color: black;
+    border-radius: 5px;
+    padding: 0 10px;
+    background-color: white;
+    opacity: 90%;
+    margin: 0.5em 0;
+  }
+  .mainContainer .quotesContainer {
+    grid-area: quotes;
+    background-image: url("bibleVerse-shape.png");
+    background-size: 100% 100%;
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Gloria Hallelujah", cursive;
+    font-size: clamp(20px, 5vw, 30px);
+    line-height: 50px;
+    padding: 25px 25px 45px 25px;
+    background-repeat: no-repeat;
+    align-self: center;
+  }
+  .mainContainer #todo {
+    width: min-content;
+    grid-area: todo;
+    color: #42FDFD;
+    font-family: "Sigmar One", cursive;
+    font-size: clamp(20px, 5vw, 30px);
+    background-color: black;
+    border-radius: 9px;
+    padding: 0 7px;
+    text-align: center;
+    justify-self: flex-end;
+    cursor: pointer;
+  }
+  .mainContainer .todoList {
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: "title" "lists" "button";
+    justify-content: center;
+    justify-self: center;
+    width: clamp(250px, 80%, 700px);
+    min-height: 341px;
+    background-color: #42FDFD;
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+  }
+  .mainContainer .todoList #title {
+    grid-area: title;
+    color: black;
+    font-family: "Sigmar One", cursive;
+    font-size: clamp(20px, 5vw, 30px);
+    margin: 2em 0;
+  }
+  .mainContainer .todoList #lists {
+    grid-area: lists;
+    margin-top: 1em;
+  }
+  .mainContainer .todoList #lists #li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+  }
+  .mainContainer .todoList #lists #li #workList {
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(16px, 5vw, 25px);
+    text-align: start;
+  }
+  .mainContainer .todoList #lists #li #deleteBtn {
+    color: black;
+    font-family: "Sigmar One", cursive;
+    font-size: clamp(16px, 5vw, 25px);
+    background-color: #02C8C8;
+    border-radius: 5px;
+    padding: 2px 0.8em;
+    align-self: center;
+    cursor: pointer;
+  }
+  .mainContainer .todoList #form {
+    grid-area: button;
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+    padding-bottom: 1em;
+    height: clamp(60px, 5vh, 80px);
+  }
+  .mainContainer .todoList #form #inputtoDo {
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    color: black;
+    font-size: clamp(20px, 5vw, 30px);
+    font-family: "Roboto Mono", monospace;
+    border: none;
+    padding: 0 1em;
+  }
+  .mainContainer .todoList #form #button {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: "Sigmar One", cursive;
+    font-size: clamp(16px, 5vw, 25px);
+    background-color: #02C8C8;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px 0.8em;
+    border: none;
+    width: min-content;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
