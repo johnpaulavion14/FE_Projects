@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tic-Tac-Toe Game</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <main class="main-container">
+        <section class="choose-player">
+            <p>Player to move first?</p>
+            <div>
+            <button id="player-x">player X</button>
+            <button id="player-o">player O</button>
+            </div>
+        </section>
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <section class="display-turn"></section>
+        <section class="tiles-container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </section>
+        <section class="controls">
+            <button id="previous">Prev.</button>
+            <button id="next">Next</button>
+            <button id="play-again">Play Again!</button>
+        </section>
+        <section class="winning-message">
+            <div id="player-win-display"></div>
+            <button id="restart">ReStart</button>
+            <button id="history">View History</button>
+        </section>
+
+    </main>
+    <script src='../src/main.js'></script>
+</body>
+</html>
