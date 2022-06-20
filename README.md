@@ -8,3 +8,5 @@
 [Grid Chessboard](https://johnpaulavion14.github.io/batch19-fe-activities/chessboard-grid/)
 
 [Landing Page](https://johnpaulavion14.github.io/batch19-fe-activities/landing-page/public/)
+
+[Tic-Tac-Toe Game](https://johnpaulavion14.github.io/batch19-fe-activities/tic-tac-toe-game/public/)
