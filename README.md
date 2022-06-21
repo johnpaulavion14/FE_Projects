@@ -13,4 +13,4 @@
 
 [Tic-Tac-Toe Game](https://johnpaulavion14.github.io/batch19-fe-activities/tic-tac-toe-game/public/)
 
-[React JS Practice](https://johnpaulavion14.github.io/batch19-fe-activities/crab/build/)
+[React JS Practice](https://johnpaulavion14.github.io/batch19-fe-activities/crab/)
