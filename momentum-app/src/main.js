@@ -86,7 +86,7 @@ let morningtoEvening = hours >= 12 ?
                         hours >=17 ? "GOODEVENING":"GOODAFTERNOON"
                         :"GOODNOON"     
                         :"GOODMORNING"
-greetingsTime.textContent = `${morningtoEvening},`
+greetindgsTime.textContent = `${morningtoEvening},`
 
 
 // Quotes
